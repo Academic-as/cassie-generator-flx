@@ -344,6 +344,94 @@
             pointer-events: none;
         }
 
+        .info-card {
+            background: linear-gradient(180deg, rgba(8, 10, 22, 0.98), rgba(18, 23, 45, 0.96));
+            border: 1px solid rgba(139, 92, 246, 0.35);
+            border-radius: 28px;
+            padding: 32px 36px 30px;
+            margin: 32px auto 0;
+            max-width: 1020px;
+            width: calc(100% - 40px);
+            color: #e2e8f0;
+            box-shadow: 0 32px 90px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .info-card::before {
+            content: '';
+            position: absolute;
+            top: -120px;
+            right: -120px;
+            width: 360px;
+            height: 360px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.24), transparent 55%);
+            filter: blur(18px);
+            pointer-events: none;
+        }
+
+        .info-card * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .info-card-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 18px;
+            flex-wrap: wrap;
+            margin-bottom: 14px;
+        }
+
+        .info-card-badge {
+            min-width: 48px;
+            min-height: 48px;
+            border-radius: 18px;
+            display: grid;
+            place-items: center;
+            background: rgba(99, 102, 241, 0.16);
+            color: #f8fafc;
+            font-size: 1.2rem;
+            font-weight: 700;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+        }
+
+        .info-card h2 {
+            margin: 0 0 10px;
+            font-size: 1.04rem;
+            color: #f8fafc;
+            letter-spacing: -0.015em;
+            line-height: 1.35;
+        }
+
+        .info-card p {
+            margin: 0 auto;
+            line-height: 1.75;
+            color: #d8d4e7;
+            max-width: 840px;
+        }
+
+        .info-card .author {
+            color: #c084fc;
+            font-weight: 700;
+        }
+
+        .info-card-note {
+            margin: 18px auto 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 14px 18px;
+            border-radius: 20px;
+            background: rgba(79, 70, 229, 0.16);
+            border: 1px solid rgba(129, 140, 248, 0.22);
+            color: #e2e8f0;
+            font-size: 0.96rem;
+        }
+
         .panel:hover {
             transform: translateY(-4px);
             box-shadow: 
@@ -1801,8 +1889,7 @@
     <div class="container">
         <div class="header">
             <h1>C.A.S.S.I.E. Generator</h1>
-            <p class="subtitle">Инструмент для создания C.A.S.S.I.E.</p>
-            <p class="subtitle">Создал Academic с верой в FunRP - v1.3</p>
+            <p class="subtitle">Инструмент для создания C.A.S.S.I.E. v1.3</p>
         </div>
 
         <div class="tabs-container">
@@ -5538,5 +5625,13 @@
             </div>
         </div>
     </div>
+            <div class="info-card">
+                <div class="info-card-header">
+                    <div>
+                        <h2>Данное приложение не является официальным продуктом FLX-project</h2>
+                        <p>Оно было создано сторонним разработчиком <a class="author" href="https://discord.com/users/534028333982285842" target="_blank" rel="noopener noreferrer">Academic (@academic_as)</a> для FLX-project.</p>
+                    </div>
+                </div>
+            </div>
 </body>
 </html>
