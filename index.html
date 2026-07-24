@@ -42,19 +42,19 @@
         }
 
         .container {
-            background: rgba(15, 23, 42, 0.85);
+            background: linear-gradient(145deg, rgba(15, 23, 42, 0.92), rgba(12, 18, 33, 0.9));
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(139, 92, 246, 0.3);
-            border-radius: 24px;
+            border: 1px solid rgba(167, 139, 250, 0.35);
+            border-radius: 28px;
             padding: 0;
             max-width: 1400px;
             width: 100%;
             margin: 0 auto;
-            box-shadow: 
-                0 25px 50px rgba(0, 0, 0, 0.5),
-                0 0 0 1px rgba(255, 255, 255, 0.05),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            box-shadow:
+                0 30px 70px rgba(0, 0, 0, 0.55),
+                0 0 0 1px rgba(255, 255, 255, 0.06),
+                inset 0 1px 0 rgba(255, 255, 255, 0.12);
             overflow: hidden;
             position: relative;
         }
@@ -72,12 +72,12 @@
         }
 
         .header {
-            background: rgba(30, 41, 59, 0.8);
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.94), rgba(17, 24, 39, 0.92));
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
             padding: 48px 40px;
             text-align: center;
-            border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+            border-bottom: 1px solid rgba(139, 92, 246, 0.25);
             position: relative;
             overflow: hidden;
         }
@@ -152,70 +152,56 @@
             }
         }
 
+        .header-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            margin-bottom: 16px;
+            border-radius: 999px;
+            background: rgba(139, 92, 246, 0.16);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            color: #f5f3ff;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-badge::before {
+            content: '✦';
+            color: #f0abfc;
+        }
+
         .subtitle {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             opacity: 0.9;
             font-weight: 500;
-            margin-bottom: 14px;
+            margin-bottom: 10px;
             position: relative;
             z-index: 2;
             color: #e2e8f0;
             letter-spacing: 0.01em;
-            display: flex;
+            line-height: 1.5;
+        }
+
+        .subtitle-secondary {
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
-            gap: 12px;
-            line-height: 1.4;
-        }
-
-        .subtitle:nth-child(2) {
-            font-size: 1.25rem;
-            font-weight: 600;
-            background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-        }
-
-        .subtitle:nth-child(3) {
-            font-size: 1rem;
-            opacity: 0.8;
+            gap: 8px;
+            margin-top: 6px;
+            padding: 10px 16px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             color: #cbd5e1;
-            background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            font-size: 0.95rem;
         }
 
-        .subtitle:nth-child(4) {
-            font-size: 0.9rem;
-            opacity: 0.7;
-            color: #94a3b8;
-            font-style: italic;
-            background: rgba(236, 72, 153, 0.1);
-            padding: 10px 18px;
-            border-radius: 12px;
-            border-left: 4px solid #ec4899;
-            backdrop-filter: blur(10px);
-        }
-
-        .subtitle:first-of-type::before {
-            content: "";
-            font-size: 1.4em;
-            filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.6));
-        }
-
-        .subtitle:nth-child(3)::before {
-            content: "";
-            font-size: 1.2em;
-        }
-
-        .subtitle:nth-child(4)::before {
-            content: "⚡";
-            font-size: 1.1em;
-            opacity: 0.9;
+        .subtitle-secondary::before {
+            content: '⚡';
+            font-size: 0.95em;
         }
 
         .tabs-container {
@@ -241,7 +227,7 @@
         .tab {
             flex: 1;
             padding: 18px 24px;
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(2, 6, 23, 0.35);
             color: #94a3b8;
             border: none;
             cursor: pointer;
@@ -256,6 +242,7 @@
             letter-spacing: 0.02em;
             min-width: 140px;
             justify-content: center;
+            border-radius: 0;
         }
 
         .tab::before {
@@ -265,10 +252,10 @@
         }
 
         .tab:hover {
-            background: rgba(139, 92, 246, 0.15);
-            color: #e2e8f0;
+            background: rgba(139, 92, 246, 0.16);
+            color: #f8fafc;
             transform: translateY(-2px);
-            box-shadow: 0 4px 20px rgba(139, 92, 246, 0.2);
+            box-shadow: inset 0 -2px 0 rgba(236, 72, 153, 0.3);
         }
 
         .tab:hover::before {
@@ -276,12 +263,12 @@
         }
 
         .tab.active {
-            background: rgba(139, 92, 246, 0.25);
+            background: linear-gradient(90deg, rgba(139, 92, 246, 0.28), rgba(236, 72, 153, 0.2));
             color: #ffffff;
             border-bottom: 3px solid #ec4899;
-            box-shadow: 
-                0 0 30px rgba(139, 92, 246, 0.3),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            box-shadow:
+                0 0 24px rgba(139, 92, 246, 0.24),
+                inset 0 1px 0 rgba(255, 255, 255, 0.12);
         }
 
         .tab.active::before {
@@ -290,7 +277,7 @@
         }
 
         .content {
-            padding: 40px;
+            padding: 24px;
         }
 
         .tab-content {
@@ -314,18 +301,18 @@
         }
 
         .section {
-            margin-bottom: 32px;
+            margin-bottom: 18px;
         }
 
         .panel {
-            background: rgba(30, 41, 59, 0.8);
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.86));
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
-            border: 1px solid rgba(139, 92, 246, 0.2);
+            border: 1px solid rgba(139, 92, 246, 0.24);
             border-radius: 20px;
-            padding: 28px;
-            box-shadow: 
-                0 8px 32px rgba(0, 0, 0, 0.3),
+            padding: 18px 20px;
+            box-shadow:
+                0 14px 36px rgba(0, 0, 0, 0.34),
                 0 0 0 1px rgba(255, 255, 255, 0.05),
                 inset 0 1px 0 rgba(255, 255, 255, 0.1);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -342,6 +329,101 @@
             bottom: 0;
             background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, rgba(59, 130, 246, 0.03) 100%);
             pointer-events: none;
+        }
+
+        .accordions-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .accordions-grid .panel-secondary {
+            margin-bottom: 0;
+        }
+
+        .accordions-grid .panel-secondary:nth-of-type(1) { 
+            order: 4;
+        }
+
+        .accordions-grid .panel-secondary:nth-of-type(2) { 
+            order: 1;
+        }
+
+        .accordions-grid .panel-secondary:nth-of-type(3) { 
+            order: 2;
+        }
+
+        .accordions-grid .panel-secondary:nth-of-type(4) { 
+            order: 3;
+        }
+
+        .accordions-grid .panel-secondary:nth-of-type(5) {
+            grid-column: 1 / -1;
+            order: 5;
+        }
+
+        .help-card {
+            background: linear-gradient(145deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.88));
+            border: 1px solid rgba(139, 92, 246, 0.24);
+            border-radius: 18px;
+            padding: 16px 18px;
+            margin-bottom: 12px;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .help-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(236, 72, 153, 0.04));
+            pointer-events: none;
+        }
+
+        .help-card > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .help-card h4 {
+            color: #c4b5fd;
+            margin-bottom: 6px;
+            font-size: 0.98rem;
+        }
+
+        .help-card p,
+        .help-card li {
+            color: #e2e8f0;
+            line-height: 1.7;
+        }
+
+        .help-card ul,
+        .help-card ol {
+            margin-left: 20px;
+            display: grid;
+            gap: 8px;
+        }
+
+        .help-card code {
+            color: #f0abfc;
+            background: rgba(0, 0, 0, 0.28);
+            padding: 6px 8px;
+            border-radius: 8px;
+            display: inline-block;
+            border: 1px solid rgba(240, 171, 252, 0.2);
+        }
+
+        .help-card .help-code {
+            display: block;
+            margin: 12px 0;
+            padding: 12px 14px;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(139, 92, 246, 0.22);
+            color: #f5f3ff;
+            word-break: break-word;
         }
 
         .info-card {
@@ -434,11 +516,11 @@
 
         .panel:hover {
             transform: translateY(-4px);
-            box-shadow: 
-                0 20px 40px rgba(0, 0, 0, 0.4),
+            box-shadow:
+                0 22px 46px rgba(0, 0, 0, 0.4),
                 0 0 0 1px rgba(139, 92, 246, 0.3),
                 inset 0 1px 0 rgba(255, 255, 255, 0.15);
-            border-color: rgba(139, 92, 246, 0.4);
+            border-color: rgba(139, 92, 246, 0.42);
         }
 
         .panel-secondary {
@@ -493,79 +575,88 @@
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 20px;
-            border-radius: 8px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(168, 85, 247, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.06);
         }
 
         #dictionaryContent th {
-            background: linear-gradient(135deg, rgba(168, 85, 247, 0.3), rgba(124, 58, 237, 0.3));
-            color: #e9d5ff;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.25), rgba(59, 130, 246, 0.15));
+            color: #c4b5fd;
             font-weight: 700;
             text-transform: uppercase;
             font-size: 0.85em;
             letter-spacing: 0.8px;
-            border: 1px solid rgba(76, 29, 149, 0.4);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            padding: 14px 16px;
+            text-align: left;
         }
 
         #dictionaryContent td {
-            border: 1px solid rgba(76, 29, 149, 0.2);
+            border: 1px solid rgba(139, 92, 246, 0.15);
             padding: 12px 16px;
-            font-family: 'Fira Code', 'Menlo', 'Monaco', monospace;
+            font-family: 'JetBrains Mono', 'Fira Code', 'Menlo', 'Monaco', monospace;
             font-size: 0.9em;
+            color: #e2e8f0;
             transition: all 0.2s ease;
         }
 
-        #dictionaryContent tr:nth-child(even) {
-            background: rgba(0, 0, 0, 0.15);
+        #dictionaryContent tbody tr:nth-child(odd) {
+            background: rgba(15, 23, 42, 0.4);
+        }
+
+        #dictionaryContent tbody tr:nth-child(even) {
+            background: rgba(30, 41, 59, 0.3);
         }
 
         #dictionaryContent tr:hover {
-            background: rgba(168, 85, 247, 0.15);
-            transform: scale(1.01);
+            background: rgba(139, 92, 246, 0.2);
         }
 
         #dictionaryContent td:hover {
-            background: rgba(236, 72, 153, 0.1);
+            background: rgba(236, 72, 153, 0.15);
             color: #f5c4ff;
             cursor: pointer;
         }
 
         /* Стили для поиска в словаре */
         #dictionaryContent input[type="text"] {
-            background: rgba(0, 0, 0, 0.5);
-            border: 1px solid #4c1d95;
-            color: #e9d5ff;
-            border-radius: 8px;
+            background: linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(8, 15, 31, 0.92));
+            border: 1px solid rgba(100, 116, 139, 0.32);
+            color: #e2e8f0;
+            border-radius: 10px;
             font-size: 0.95em;
+            padding: 10px 14px;
             transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
         }
 
         #dictionaryContent input[type="text"]:focus {
             outline: none;
-            border-color: #a78bfa;
-            box-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
-            background: rgba(0, 0, 0, 0.6);
+            border-color: rgba(139, 92, 246, 0.6);
+            box-shadow: 0 0 16px rgba(139, 92, 246, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            background: rgba(30, 41, 59, 0.9);
         }
 
         textarea {
             width: 100%;
-            padding: 20px;
-            background: rgba(15, 23, 42, 0.8);
+            padding: 16px;
+            background: linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(8, 15, 31, 0.92));
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(100, 116, 139, 0.3);
+            border: 1px solid rgba(100, 116, 139, 0.32);
             color: #e2e8f0;
             font-family: 'JetBrains Mono', 'Fira Code', 'Monaco', monospace;
-            font-size: 1rem;
+            font-size: 0.95rem;
             resize: vertical;
-            min-height: 120px;
+            min-height: 80px;
             border-radius: 16px;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 
-                0 4px 16px rgba(0, 0, 0, 0.2),
+            box-shadow:
+                0 8px 24px rgba(0, 0, 0, 0.26),
                 inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            line-height: 1.6;
+            line-height: 1.5;
         }
 
         textarea::placeholder {
@@ -586,18 +677,18 @@
 
         .controls {
             display: flex;
-            gap: 24px;
+            gap: 16px;
             flex-wrap: wrap;
-            margin: 24px 0;
-            padding: 24px;
-            background: rgba(15, 23, 42, 0.6);
+            margin: 16px 0;
+            padding: 16px;
+            background: linear-gradient(145deg, rgba(15, 23, 42, 0.74), rgba(8, 15, 31, 0.78));
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
-            border: 1px solid rgba(100, 116, 139, 0.2);
+            border: 1px solid rgba(100, 116, 139, 0.24);
             border-radius: 20px;
-            box-shadow: 
-                0 8px 32px rgba(0, 0, 0, 0.3),
-                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+            box-shadow:
+                0 12px 32px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.06);
         }
 
         .checkbox-group {
@@ -676,11 +767,12 @@
         .btn-primary {
             background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 50%, #ec4899 100%);
             color: white;
-            box-shadow: 
-                0 8px 32px rgba(139, 92, 246, 0.3),
+            box-shadow:
+                0 10px 30px rgba(139, 92, 246, 0.28),
                 0 0 0 1px rgba(255, 255, 255, 0.1);
             min-width: 200px;
             font-size: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .btn-primary:hover {
@@ -698,12 +790,13 @@
         }
 
         .btn-secondary {
-            background: linear-gradient(135deg, rgba(236, 72, 153, 0.8) 0%, rgba(244, 63, 94, 0.8) 100%);
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.88) 0%, rgba(244, 63, 94, 0.88) 100%);
             color: white;
-            box-shadow: 
-                0 8px 32px rgba(236, 72, 153, 0.3),
+            box-shadow:
+                0 10px 30px rgba(236, 72, 153, 0.28),
                 0 0 0 1px rgba(255, 255, 255, 0.1);
             min-width: 160px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .btn-secondary:hover {
@@ -720,15 +813,15 @@
         }
 
         .result-container {
-            background: rgba(15, 23, 42, 0.8);
+            background: linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(11, 17, 31, 0.88));
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
             border: 1px solid rgba(139, 92, 246, 0.3);
             border-radius: 20px;
-            padding: 32px;
-            margin: 24px 0;
-            box-shadow: 
-                0 8px 32px rgba(0, 0, 0, 0.3),
+            padding: 20px;
+            margin: 16px 0;
+            box-shadow:
+                0 16px 40px rgba(0, 0, 0, 0.34),
                 0 0 0 1px rgba(255, 255, 255, 0.05),
                 inset 0 1px 0 rgba(255, 255, 255, 0.1);
             position: relative;
@@ -1020,8 +1113,8 @@
             justify-content: space-between;
             cursor: pointer;
             user-select: none;
-            padding: 16px 20px;
-            margin: -20px -20px 20px -20px;
+            padding: 12px 16px;
+            margin: -16px -16px 12px -16px;
             border-radius: 16px 16px 0 0;
             background: rgba(30, 41, 59, 0.6);
             backdrop-filter: blur(10px);
@@ -1687,30 +1780,50 @@
 
         .example-item {
             border-left: 4px solid #ec4899;
-            background: rgba(11, 9, 22, 0.92);
-            border: 1px solid rgba(124, 58, 237, 0.18);
-            border-radius: 20px;
-            padding: 18px;
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.9));
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: 14px;
+            padding: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .example-item:hover {
+            border-color: rgba(236, 72, 153, 0.3);
+            box-shadow: 0 12px 32px rgba(236, 72, 153, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.06);
         }
 
         .example-label {
-            background: #ec4899;
+            background: linear-gradient(135deg, #ec4899, #f43f5e);
             color: #ffffff;
-            padding: 6px 12px;
-            border-radius: 999px;
-            font-size: 0.78rem;
-            letter-spacing: 0.04em;
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-right: 10px;
+            margin-bottom: 8px;
+            letter-spacing: 0.05em;
+            box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
         }
 
         .example-input {
-            color: #9ca3af;
-            margin: 10px 0 6px;
+            color: #cbd5e1;
+            margin: 8px 0;
+            font-size: 0.9em;
             font-family: 'JetBrains Mono', 'Fira Code', 'Monaco', monospace;
         }
 
         .example-output {
             color: #d8b4fe;
-            font-family: 'Fira Code', 'Menlo', 'Monaco', monospace;
+            font-weight: 500;
+            word-break: break-all;
+            font-family: 'JetBrains Mono', 'Fira Code', 'Menlo', 'Monaco', monospace;
+            font-size: 0.85em;
+            background: rgba(139, 92, 246, 0.08);
+            padding: 8px 10px;
+            border-radius: 8px;
+            border-left: 3px solid #a855f7;
+            margin-top: 6px;
         }
 
         .unrecognized-block {
@@ -1888,8 +2001,10 @@
     </div>
     <div class="container">
         <div class="header">
+            <div class="header-badge">FLX • CASSIE</div>
             <h1>C.A.S.S.I.E. Generator</h1>
-            <p class="subtitle">Инструмент для создания C.A.S.S.I.E. v1.3</p>
+            <p class="subtitle">Инструмент для создания C.A.S.S.I.E.</p>
+            <p class="subtitle subtitle-secondary">Быстро, аккуратно и без ручного форматирования</p>
         </div>
 
         <div class="tabs-container">
@@ -1907,9 +2022,10 @@
                     <textarea id="inputText" placeholder="Пример: Внимание всему персоналу зоны 02. Мобильная оперативная группа уничтожила SCP 173."></textarea>
                 </div>
 
-                <div class="panel panel-secondary" style="margin-bottom: 20px;">
+                <div class="accordions-grid">
+                <div class="panel panel-secondary" style="margin-bottom: 0;">
                     <div class="accordion-header" onclick="toggleAccordion(this)">
-                        <label class="label">⚡ Основные команды CASSIE</label>
+                        <label class="label">⚡ Готовые команды CASSIE</label>
                         <span class="accordion-arrow collapsed">▼</span>
                     </div>
                     <div class="accordion-content collapsed">
@@ -1927,7 +2043,7 @@
                     </div>
                 </div>
 
-                <div class="panel panel-secondary" style="margin-bottom: 20px;">
+                <div class="panel panel-secondary" style="margin-bottom: 0;">
                     <div class="accordion-header" onclick="toggleAccordion(this)">
                         <label class="label">✈️ NATO команды</label>
                         <span class="accordion-arrow collapsed">▼</span>
@@ -1964,7 +2080,7 @@
                     </div>
                 </div>
 
-                <div class="panel panel-secondary" style="margin-bottom: 20px;">
+                <div class="panel panel-secondary" style="margin-bottom: 0;">
                     <div class="accordion-header" onclick="toggleAccordion(this)">
                         <label class="label">🔊 Дополнительные звуки</label>
                         <span class="accordion-arrow collapsed">▼</span>
@@ -1982,7 +2098,7 @@
                     </div>
                 </div>
 
-                <div class="panel panel-secondary" style="margin-bottom: 20px;">
+                <div class="panel panel-secondary" style="margin-bottom: 0;">
                     <div class="accordion-header" onclick="toggleAccordion(this)">
                         <label class="label">🎄 Новогоднии команды</label>
                         <span class="accordion-arrow collapsed">▼</span>
@@ -1998,7 +2114,7 @@
                     </div>
                 </div>
 
-                <div class="panel panel-secondary" style="margin-bottom: 20px;">
+                <div class="panel panel-secondary" style="margin-bottom: 0;">
                     <div class="accordion-header" onclick="toggleAccordion(this)">
                         <label class="label">🎨 Форматирование текста</label>
                         <span class="accordion-arrow collapsed">▼</span>
@@ -2052,6 +2168,7 @@
                     </div>
                     </div>
                 </div>
+                </div>
 
                 <div class="button-group" style="justify-content: center;">
                     <button class="btn-primary" onclick="generateCommand()" style="flex: 0 1 300px;">⚡ Сгенерировать</button>
@@ -2087,13 +2204,13 @@
             <!-- TAB 2: Примеры -->
             <div id="examples" class="tab-content">
                 <div class="examples">
-                    <h3>Примеры использования:</h3>
-                    <div style="margin-bottom: 20px; background: rgba(168, 85, 247, 0.1); border: 1px solid #4c1d95; padding: 15px; border-radius: 8px;">
-                        <h4 style="color: #a78bfa; margin-bottom: 10px;">💡 Как это работает:</h4>
-                        <ul style="margin-left: 20px; color: #e9d5ff;">
+                    <h3 style="margin-bottom: 8px; color: #c4b5fd; font-size: 1.5rem;">📚 Примеры использования:</h3>
+                    <div style="margin-bottom: 20px; background: linear-gradient(145deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.88)); border: 1px solid rgba(139, 92, 246, 0.24); padding: 20px; border-radius: 18px; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.06);">
+                        <h4 style="color: #c4b5fd; margin-bottom: 12px; font-size: 1.05rem;">💡 Как это работает:</h4>
+                        <ul style="margin-left: 20px; color: #e2e8f0; line-height: 1.8;">
                             <li>Вы пишете текст на русском</li>
                             <li>Сайт автоматически переводит его в английский CASSIE команды</li>
-                            <li>Результат выводится готовой командой: <code style="color: #ec4899;">cassie sub [английский] csub [русский]</code></li>
+                            <li>Результат выводится готовой командой: <code style="color: #ec4899; background: rgba(236, 72, 153, 0.1); padding: 2px 6px; border-radius: 4px;">cassie sub [английский] csub [русский]</code></li>
                             <li>Форматирование (теги цветов, $sleep, $pitch) остаются в обеих строках</li>
                             <li>Точки удаляются из CASSIE строки, но остаются в русском тексте</li>
                             <li>Все числа разбиваются на отдельные цифры с пробелами в CASSIE: "173" → "1 7 3"</li>
@@ -2102,8 +2219,8 @@
                         </ul>
                     </div>
                     
-                    <div style="margin-bottom: 20px; background: rgba(168, 85, 247, 0.1); border: 1px solid #4c1d95; padding: 15px; border-radius: 8px;">
-                        <h4 style="color: #a78bfa; margin-bottom: 10px;">📌 Автоматическая генерация команды:</h4>
+                    <div style="margin-bottom: 20px; background: linear-gradient(145deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.88)); border: 1px solid rgba(139, 92, 246, 0.24); padding: 20px; border-radius: 18px; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.06);">
+                        <h4 style="color: #c4b5fd; margin-bottom: 12px; font-size: 1.05rem;">📌 Автоматическая генерация команды:</h4>
                         <div class="example-item">
                             <span class="example-label">Пример 1</span>
                             <div class="example-input">📝 Ввод: "Внимание всему персоналу зоны 02"</div>
@@ -2126,8 +2243,8 @@
                         </div>
                     </div>
 
-                    <div style="margin-top: 20px; background: rgba(168, 85, 247, 0.1); border: 1px solid #4c1d95; padding: 15px; border-radius: 8px;">
-                        <h4 style="color: #a78bfa; margin-bottom: 10px;">🎵 С форматированием тона ($pitch):</h4>
+                    <div style="margin-top: 20px; background: linear-gradient(145deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.88)); border: 1px solid rgba(139, 92, 246, 0.24); padding: 20px; border-radius: 18px; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.06);">
+                        <h4 style="color: #c4b5fd; margin-bottom: 12px; font-size: 1.05rem;">🎵 С форматированием тона ($pitch):</h4>
                         <div class="example-item">
                             <span class="example-label">Пример 6</span>
                             <div class="example-input">📝 Ввод: "$pitch_10.5 Объект SCP-173 нейтрализован"</div>
@@ -2141,18 +2258,18 @@
             <div id="help" class="tab-content">
                 <div style="color: #e9d5ff; line-height: 1.8;">
                     <h3 style="margin-bottom: 15px; color: #c4b5fd;">📖 Справка по использованию</h3>
-                    
-                    <div style="margin-bottom: 20px;">
-                        <h4 style="color: #a78bfa; margin-bottom: 10px;">⚡ Главная особенность:</h4>
-                        <p style="color: #e9d5ff;">
+
+                    <div class="help-card">
+                        <h4>⚡ Главная особенность:</h4>
+                        <p>
                             Вы пишете текст на русском языке, а сайт <strong>автоматически</strong> генерирует готовую CASSIE команду в формате:
                         </p>
-                        <code style="color: #a78bfa; background: rgba(0,0,0,0.3); padding: 10px; display: block; margin: 10px 0; border-radius: 4px;">cassie sub [английский перевод] csub [ваш русский текст]</code>
+                        <div class="help-code">cassie sub [английский перевод] csub [ваш русский текст]</div>
                     </div>
 
-                    <div style="margin-bottom: 20px;">
-                        <h4 style="color: #a78bfa; margin-bottom: 10px;">🎯 Как использовать:</h4>
-                        <ol style="margin-left: 20px;">
+                    <div class="help-card">
+                        <h4>🎯 Как использовать:</h4>
+                        <ol>
                             <li>Введите текст на русском (или на английском)</li>
                             <li>Используйте кнопки форматирования для добавления цветов и разделителей</li>
                             <li>Настройте длительность паузы (от 1 до 99 секунд)</li>
@@ -2162,19 +2279,19 @@
                         </ol>
                     </div>
 
-                    <div style="margin-bottom: 20px;">
-                        <h4 style="color: #a78bfa; margin-bottom: 10px;">🔤 Основные команды:</h4>
-                        <ul style="margin-left: 20px;">
-                            <li><code style="color: #ec4899;">cassie</code> — стандартная команда CASSIE</li>
-                            <li><code style="color: #ec4899;">cassie_sl</code> — без начального звукового сигнала</li>
-                            <li><code style="color: #ec4899;">sub</code> — озвучка на английском (что говорит CASSIE)</li>
-                            <li><code style="color: #ec4899;">csub</code> — текст на русском (что видят игроки)</li>
+                    <div class="help-card">
+                        <h4>🔤 Основные команды:</h4>
+                        <ul>
+                            <li><code>cassie</code> — стандартная команда CASSIE</li>
+                            <li><code>cassie_sl</code> — без начального звукового сигнала</li>
+                            <li><code>sub</code> — озвучка на английском (что говорит CASSIE)</li>
+                            <li><code>csub</code> — текст на русском (что видят игроки)</li>
                         </ul>
                     </div>
 
-                    <div style="margin-bottom: 20px;">
-                        <h4 style="color: #a78bfa; margin-bottom: 10px;">🎨 Форматирование текста:</h4>
-                        <ul style="margin-left: 20px; color: #e9d5ff;">
+                    <div class="help-card">
+                        <h4>🎨 Форматирование текста:</h4>
+                        <ul>
                             <li>&lt;split&gt; — разделитель (сохраняется в обеих строках)</li>
                             <li>&lt;color=#HEX&gt;текст&lt;/color&gt; — окраска текста (ТОЛЬКО в русском тексте)</li>
                             <li>$STUTTER — эффект заикания (только в английской части)</li>
@@ -2183,20 +2300,20 @@
                         </ul>
                     </div>
 
-                    <div style="margin-bottom: 20px;">
-                        <h4 style="color: #a78bfa; margin-bottom: 10px;">📋 Встроенные CASSIE команды:</h4>
-                        <ul style="margin-left: 20px; color: #e9d5ff;">
-                            <li><code style="color: #ec4899;">MtfUnit</code> — Mobile Task Force Unit (Мобильная оперативная группа)</li>
-                            <li><code style="color: #ec4899;">HasEntered</code> — has entered the facility</li>
-                            <li><code style="color: #ec4899;">AllSecured</code> — All SCP subjects have been secured</li>
-                            <li><code style="color: #ec4899;">NoSCPsLeft</code> — Substantial threat remains, exercise caution</li>
-                            <li><code style="color: #ec4899;">Bell_Start / Bell_End</code> — звуки объявления</li>
+                    <div class="help-card">
+                        <h4>📋 Встроенные CASSIE команды:</h4>
+                        <ul>
+                            <li><code>MtfUnit</code> — Mobile Task Force Unit (Мобильная оперативная группа)</li>
+                            <li><code>HasEntered</code> — has entered the facility</li>
+                            <li><code>AllSecured</code> — All SCP subjects have been secured</li>
+                            <li><code>NoSCPsLeft</code> — Substantial threat remains, exercise caution</li>
+                            <li><code>Bell_Start / Bell_End</code> — звуки объявления</li>
                         </ul>
                     </div>
 
-                    <div style="background: rgba(168, 85, 247, 0.1); border: 1px solid #4c1d95; padding: 15px; border-radius: 8px;">
-                        <h4 style="color: #a78bfa; margin-bottom: 10px;">💡 Важно знать:</h4>
-                        <ul style="margin-left: 20px; color: #e9d5ff;">
+                    <div class="help-card">
+                        <h4>💡 Важно знать:</h4>
+                        <ul>
                             <li>CASSIE <strong>говорит на английском</strong> (sub часть команды)</li>
                             <li>Игроки <strong>видят русский текст</strong> (csub часть команды)</li>
                             <li>Русские слова автоматически переводятся с помощью словаря</li>
@@ -2213,11 +2330,24 @@
             <!-- TAB 4: Словарь -->
             <div id="dictionary" class="tab-content">
                 <div style="color: #e9d5ff; line-height: 1.8;">
-                    <h3 style="margin-bottom: 15px; color: #c4b5fd;">📖 Словарь CASSIE</h3>
-                    <p style="margin-bottom: 20px; color: #e9d5ff;">
-                        Здесь вы можете найти все слова, которые знает генератор. Русские слова переводятся в английские команды CASSIE.
-                    </p>
-                    <div id="dictionaryContent" style="background: rgba(0, 0, 0, 0.4); border: 1px solid #4c1d95; border-radius: 8px; padding: 20px; max-height: 600px; overflow-y: auto;">
+                    <div class="help-card">
+                        <h4>📖 Словарь CASSIE</h4>
+                        <p style="margin-bottom: 0;">
+                            Здесь вы можете найти все слова, которые знает генератор. Русские слова переводятся в английские команды CASSIE.
+                        </p>
+                    </div>
+
+                    <div class="help-card" style="background: linear-gradient(145deg, rgba(255, 107, 107, 0.08), rgba(239, 68, 68, 0.06)); border-color: rgba(239, 68, 68, 0.24);">
+                        <h4 style="color: #fca5a5; margin-bottom: 8px;">⚠️ Внимание!</h4>
+                        <p style="margin-bottom: 12px; color: #e2e8f0;">
+                            Генератор C.A.S.S.I.E. может не знать слов, которые вы хотите использовать, и/или готовый словарь может иметь ошибки. Если хотите помочь:
+                        </p>
+                        <a href="https://forms.gle/y3x33DZaVdUGeCwd9" target="_blank" class="btn-primary" style="display: inline-block; padding: 11px 22px; font-size: 0.9rem;">
+                            📝 Помочь с улучшением словаря
+                        </a>
+                    </div>
+
+                    <div id="dictionaryContent" style="background: linear-gradient(145deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.88)); border: 1px solid rgba(139, 92, 246, 0.24); border-radius: 18px; padding: 24px; max-height: 700px; overflow-y: auto; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.06); margin-top: 20px;">
                         <!-- Словарь будет загружен сюда -->
                     </div>
                 </div>
@@ -4192,17 +4322,20 @@
             searchInput.type = 'text';
             searchInput.placeholder = '🔍 Поиск по словам...';
             searchInput.style.flex = '1';
-            searchInput.style.padding = '10px';
-            searchInput.style.background = 'rgba(0, 0, 0, 0.4)';
-            searchInput.style.border = '1px solid #4c1d95';
-            searchInput.style.color = '#e9d5ff';
-            searchInput.style.borderRadius = '6px';
+            searchInput.style.padding = '10px 14px';
+            searchInput.style.background = 'linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(8, 15, 31, 0.92))';
+            searchInput.style.border = '1px solid rgba(100, 116, 139, 0.32)';
+            searchInput.style.color = '#e2e8f0';
+            searchInput.style.borderRadius = '10px';
             searchInput.style.fontSize = '0.9em';
+            searchInput.style.backdropFilter = 'blur(10px)';
+            searchInput.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.26), inset 0 1px 0 rgba(255, 255, 255, 0.1)';
             
             const counter = document.createElement('span');
-            counter.style.color = '#a78bfa';
+            counter.style.color = '#c4b5fd';
             counter.style.fontSize = '0.9em';
             counter.style.fontWeight = '600';
+            counter.style.whiteSpace = 'nowrap';
             
             searchContainer.appendChild(searchInput);
             searchContainer.appendChild(counter);
@@ -4221,19 +4354,27 @@
             
             const th1 = document.createElement('th');
             th1.textContent = 'Русское слово';
-            th1.style.border = '1px solid #4c1d95';
-            th1.style.padding = '12px';
-            th1.style.background = 'rgba(168, 85, 247, 0.2)';
+            th1.style.border = '1px solid rgba(139, 92, 246, 0.3)';
+            th1.style.padding = '14px 16px';
+            th1.style.background = 'linear-gradient(135deg, rgba(139, 92, 246, 0.25), rgba(59, 130, 246, 0.15))';
+            th1.style.color = '#c4b5fd';
             th1.style.textAlign = 'left';
             th1.style.fontWeight = '700';
+            th1.style.textTransform = 'uppercase';
+            th1.style.fontSize = '0.85em';
+            th1.style.letterSpacing = '0.8px';
             
             const th2 = document.createElement('th');
             th2.textContent = 'Английское слово (CASSIE)';
-            th2.style.border = '1px solid #4c1d95';
-            th2.style.padding = '12px';
-            th2.style.background = 'rgba(168, 85, 247, 0.2)';
+            th2.style.border = '1px solid rgba(139, 92, 246, 0.3)';
+            th2.style.padding = '14px 16px';
+            th2.style.background = 'linear-gradient(135deg, rgba(139, 92, 246, 0.25), rgba(59, 130, 246, 0.15))';
+            th2.style.color = '#c4b5fd';
             th2.style.textAlign = 'left';
             th2.style.fontWeight = '700';
+            th2.style.textTransform = 'uppercase';
+            th2.style.fontSize = '0.85em';
+            th2.style.letterSpacing = '0.8px';
             
             headerRow.appendChild(th1);
             headerRow.appendChild(th2);
@@ -4254,19 +4395,27 @@
                 
                 const td1 = document.createElement('td');
                 td1.textContent = russian;
-                td1.style.border = '1px solid #4c1d95';
-                td1.style.padding = '10px';
-                td1.style.background = 'rgba(0, 0, 0, 0.2)';
+                td1.style.border = '1px solid rgba(139, 92, 246, 0.15)';
+                td1.style.padding = '12px 16px';
+                td1.style.background = rowCount % 2 === 0 ? 'rgba(15, 23, 42, 0.4)' : 'rgba(30, 41, 59, 0.3)';
                 td1.style.cursor = 'pointer';
+                td1.style.color = '#e2e8f0';
+                td1.style.fontFamily = "'JetBrains Mono', 'Fira Code', 'Menlo', 'Monaco', monospace";
+                td1.style.fontSize = '0.9em';
+                td1.style.transition = 'all 0.2s ease';
                 td1.title = 'Кликните, чтобы скопировать русское слово';
                 td1.onclick = () => copyToClipboardText(russian);
                 
                 const td2 = document.createElement('td');
                 td2.textContent = english;
-                td2.style.border = '1px solid #4c1d95';
-                td2.style.padding = '10px';
-                td2.style.background = 'rgba(0, 0, 0, 0.2)';
+                td2.style.border = '1px solid rgba(139, 92, 246, 0.15)';
+                td2.style.padding = '12px 16px';
+                td2.style.background = rowCount % 2 === 0 ? 'rgba(15, 23, 42, 0.4)' : 'rgba(30, 41, 59, 0.3)';
                 td2.style.cursor = 'pointer';
+                td2.style.color = '#e2e8f0';
+                td2.style.fontFamily = "'JetBrains Mono', 'Fira Code', 'Menlo', 'Monaco', monospace";
+                td2.style.fontSize = '0.9em';
+                td2.style.transition = 'all 0.2s ease';
                 td2.title = 'Кликните, чтобы скопировать английское слово';
                 td2.onclick = () => copyToClipboardText(english);
                 
@@ -5377,45 +5526,6 @@
             }, 3000);
         }
 
-        // Функции для модального окна обновлений
-        function showUpdateModal() {
-            const modal = document.getElementById('updateModal');
-            modal.classList.add('show');
-            document.body.style.overflow = 'hidden'; // Запретить прокрутку фона
-        }
-
-        function hideUpdateModal() {
-            const modal = document.getElementById('updateModal');
-            modal.classList.remove('show');
-            document.body.style.overflow = ''; // Разрешить прокрутку фона
-        }
-
-        function showUpdateBranch(branch) {
-            const branchV1 = document.getElementById('branchV1');
-            const branchPreV1 = document.getElementById('branchPreV1');
-            const branchBtnV1 = document.getElementById('branchBtnV1');
-            const branchBtnPreV1 = document.getElementById('branchBtnPreV1');
-
-            if (branch === 'v1') {
-                branchV1.classList.remove('hidden');
-                branchPreV1.classList.add('hidden');
-                branchBtnV1.classList.add('active');
-                branchBtnPreV1.classList.remove('active');
-            } else {
-                branchV1.classList.add('hidden');
-                branchPreV1.classList.remove('hidden');
-                branchBtnV1.classList.remove('active');
-                branchBtnPreV1.classList.add('active');
-            }
-        }
-
-        // Закрытие модального окна по нажатию Escape
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                hideUpdateModal();
-            }
-        });
-
         // Инициализация
         document.addEventListener('DOMContentLoaded', () => {
             updateStats(0, 0, 0);
@@ -5445,186 +5555,6 @@
         });
     </script>
 
-    <!-- Значок обновлений -->
-    <div id="updateIcon" class="update-icon" onclick="showUpdateModal()">📜</div>
-
-    <!-- Модальное окно обновлений -->
-    <div id="updateModal" class="modal-overlay" onclick="hideUpdateModal()">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <div class="modal-header">
-                <h3>📋 Обновления C.A.S.S.I.E. Generator</h3>
-                <button class="modal-close" onclick="hideUpdateModal()">✕</button>
-            </div>
-            <div class="modal-body">
-                <div class="update-branch-buttons">
-                    <button class="branch-toggle active" id="branchBtnV1" onclick="showUpdateBranch('v1')">Версия c v1.0</button>
-                    <button class="branch-toggle" id="branchBtnPreV1" onclick="showUpdateBranch('pre-v1')">Версии от 0.1 до 0.9</button>
-                </div>
-                <div id="branchV1" class="update-branch-content">
-                    <div class="update-item">
-                        <div class="update-date">v1.3 — 8 мая 2026</div>
-                        <ul class="update-list">
-                            <li><strong>✨ Релиз на GitHub:</strong> <a href="https://github.com/Academic-as/cassie-generator-flx" style="color: #0366d6; text-decoration: none; border-bottom: 1px dashed #0366d6;">тык</a> </li>
-                            <li><strong>🧩 Добавлены новые вариативные слова:</strong> расширена база слов для более точной генерации.</li>
-                        </ul>
-                    </div>
-                    <div class="update-item">
-                        <div class="update-date">v1.2 — 4 мая 2026</div>
-                        <ul class="update-list">
-                            <li><strong>✨ Обновлён интерфейс:</strong> улучшена визуальная стилистика, добавлены более чёткие разделы, кнопки и подсветка для лучшей читабельности.</li>
-                            <li><strong>🧠 Оптимизирована логика вкладок:</strong> убраны эмодзи в заголовках вкладок и устранено ненужное движение при наведении.</li>
-                            <li><strong>⚡ Улучшены карточки и панели:</strong> добавлен эффект glassmorphism, более плавные тени и hover-анимации для блоков.</li>
-                            <li><strong>🧩 Добавлены новые вариативные слова:</strong> расширена база слов для более точной генерации.</li>
-                        </ul>
-                    </div>
-                    <div class="update-item">
-                        <div class="update-date">v1 версия</div>
-                        <ul class="update-list">
-                            <li><strong>🚧 Релизная версия:</strong> Релиз версии 1.0 C.A.S.S.I.E. Generato.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div id="branchPreV1" class="update-branch-content hidden">
-                    <div class="update-item">
-                        <div class="update-date">v0.9.5 - 1 мая 2026</div>
-                        <ul class="update-list">
-                            <li><strong>🐛 Исправлены критические ошибки в обработке команд:</strong> Устранены баги, приводившие к некорректной генерации при использовании сложных комбинаций команд и спецсимволов.</li>
-                            <li><strong>🔧 Улучшена стабильность генерации:</strong> Оптимизирована логика токенизации для предотвращения сбоев при обработке длинных текстов.</li>
-                            <li><strong>📈 Добавлена поддержка новых шаблонов:</strong> Внедрены дополнительные шаблоны для более разнообразной генерации контента.</li>
-                        </ul>
-                    </div>
-                    <div class="update-item">
-                        <div class="update-date">v0.9.4 - 30 апреля 2026</div>
-                        <ul class="update-list">
-                            <li><strong>🔊 Добавлена поддержка специальных звуковых команд .g1–.g7:</strong> Теперь `.g1` и другие команды корректно вставляются в английскую часть, а в русской подписи не отображаются.</li>
-                            <li><strong>🔧 Исправлена токенизация `.g1`–`.g7`:</strong> команды больше не разбиваются на `.` + `g1`, что устраняет ошибку распознавания.</li>
-                            <li><strong>🐛 Улучшена точность генерации:</strong> снижено количество ложных нераспознаваний при вводе команд и спецсимволов.</li>
-                        </ul>
-                    </div>
-                    <div class="update-item">
-                        <div class="update-date">v0.9.3 - 30 апреля 2026</div>
-                        <ul class="update-list">
-                            <li><strong>🧩 Улучшено распознавание готовых команд:</strong> Добавлена регистронезависимая проверка CASSIE-команд, теперь `Xmas_epsilon11` и другие варианты распознаются корректно.</li>
-                            <li><strong>🔢 Исправлена токенизация команд с цифрами:</strong> Команды вида `Xmas_Epsilon11` теперь обрабатываются как единый токен, а не разбиваются на `Xmas_Epsilon` + `11`.</li>
-                            <li><strong>🐛 Фикс бага распознавания:</strong> Снижено количество ложных нераспознаваний для праздничных команд и односложных CASSIE-ключей.</li>
-                        </ul>
-                    </div>
-                    <div class="update-item">
-                        <div class="update-date">v0.9.2 - 30 апреля 2026</div>
-                        <ul class="update-list">
-                            <li><strong>🔍 Фикс бага "color" и "split":</strong> Исправлен баг с "color" и "split", которые учитывались в системе "Не распознано".</li>
-                        </ul>
-                    </div>
-                    <div class="update-item">
-                        <div class="update-date">v0.9 - 30 апреля 2026</div>
-                        <ul class="update-list">
-                            <li><strong>🚀 Глобальный апгрейд словаря «russianToCassie»:</strong> словарь russianToCassie получил серьёзный апгрейд — теперь он лучше понимает смысл и точнее генерирует.</li>
-                            <li><strong>🧠 Переработка предлогов:</strong> «Stas» улучшил логику предлогов.</li>
-                        </ul>
-                    </div>
-                    <div class="update-item">
-                        <div class="update-date">v0.6.1 - 29 апреля 2026</div>
-                        <ul class="update-list">
-                            <li><strong>🎴 Добавлена система аккордеонов:</strong> все основные разделы команд (Основные команды CASSIE, NATO команды, Форматирование текста) теперь отображаются в виде сворачиваемых блоков (аккордеонов) для улучшения пользовательского опыта и снижения нагрузки на экран.</li>
-                        </ul>
-                    </div>
-                    <div class="update-item">
-                        <div class="update-date">v0.6 - 29 апреля 2026</div>
-                        <ul class="update-list">
-                            <li><strong>🧠 Обновлён словарь russianToCassie:</strong> словарь был очищен и нормализован, теперь содержит только поддерживаемые CASSIE значения и ключи в нижнем регистре. Так же была убрана вариативность слов (Мир = World - есть, а Миру = World - нету)</li>
-                        </ul>
-                    </div>
-                    <div class="update-item">
-                        <div class="update-date">v0.5.6 - 28 апреля 2026</div>
-                        <ul class="update-list">
-                            <li><strong>📋 Убраны и добавлены слова:</strong> Были убраны слова которые C.A.S.S.I.E. не говорит и также были добавлены те которые может говорить.</li>
-                            <li><strong>🔍 Нужен человек:</strong> Нужен человек, который напишет все доступные слова от C.A.S.S.I.E и напишет их вариативность (пример: Врачь = Doctor, Медик = Doctor). Вы можете опираться на это руководство: <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2220087668" target="_blank">Руководство</a></li>
-                        </ul>
-                    </div>
-                    <div class="update-item">
-                        <div class="update-date">v0.5.5 - 28 апреля 2026</div>
-                        <ul class="update-list">
-                            <li><strong>📋 Убраны слова:</strong> Были убраны слова которые C.A.S.S.I.E. не говорит.</li>
-                            <li><strong>🔍 Нужен человек:</strong> Нужен человек, который проверит все слова C.A.S.S.I.E. на наличие ошибок, несуществующих слов и слов, которые можно добавить и написать вериотипность (пример: Врачь = Doctor, Медик = Doctor). Вы можете опираться на это руководство: <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2220087668" target="_blank">Руководство по проверке слов</a></li>
-                        </ul>
-                    </div>
-                    <div class="update-item">
-                        <div class="update-date">v0.5.4 - 28 апреля 2026</div>
-                        <ul class="update-list">
-                            <li><strong>🎨 Улучшенный UI словаря:</strong> Добавлен поиск по словам в реальном времени, счетчик найденных слов, кликабельные ячейки для копирования, улучшенные стили с анимациями и градиентами.</li>
-                            <li><strong>📋 Копирование одним кликом:</strong> Теперь можно копировать русские и английские слова прямо из таблицы словаря с уведомлением о копировании.</li>
-                            <li><strong>🔍 Интерактивный поиск:</strong> Поиск фильтрует таблицу мгновенно, показывая количество найденных слов из общего числа.</li>
-                        </ul>
-                    </div>
-                    <div class="update-item">
-                        <div class="update-date">v0.5.3 - 27 апреля 2026</div>
-                        <ul class="update-list">
-                            <li><strong>📖 Новая вкладка "Словарь":</strong> Добавлена полная таблица всех поддерживаемых слов с русским и английским переводом, отсортированная по алфавиту для удобства поиска.</li>
-                            <li><strong>🔧 Исправление "Scp Scp":</strong> Устранена ошибка двойного перевода "scp-обект" - теперь правильно переводится как "ScpSubject".</li>
-                            <li><strong>💾 Поддержка "USB-накопитель":</strong> Добавлена корректная обработка составных слов с дефисом, включая "USB-накопитель" → "USBDrive".</li>
-                            <li><strong>🧠 Умная система предлогов:</strong> Предлог "в" теперь переводится умно: "to" для направлений, "in" для состояний (Danger, Threat), "at" для времени.</li>
-                            <li><strong>⚡ Регистронезависимый поиск:</strong> Словарь теперь ищет слова без учета регистра, исправляя проблемы с заглавными буквами.</li>
-                            <li><strong>🎯 Улучшенная токенизация:</strong> Добавлена специальная обработка составных слов ("scp-объект", "USB-накопитель") как единых токенов.</li>
-                            <li><strong>📋 Фразовая обработка:</strong> "scp-объект" и "scp-объекты" теперь обрабатываются как составные фразы для точного перевода.</li>
-                        </ul>
-                    </div>
-                    <div class="update-item">
-                        <div class="update-date">v0.5.1 - 27 апреля 2026</div>
-                        <ul class="update-list">
-                            <li><strong>💡 Интеллектуальные предложения замены:</strong> Добавлена система автоматических предложений для нераспознанных слов с тремя типами поиска: по расстоянию Левенштейна, семантическим категориям и префиксам слов.</li>
-                            <li><strong>🎯 Интерактивные кнопки замены:</strong> Нераспознанные слова теперь отображаются с кнопками предложений замены, позволяющими одним кликом заменить слово в поле ввода.</li>
-                            <li><strong>🔧 Исправление зависания:</strong> Устранена критическая ошибка бесконечного цикла при вводе специальных символов (@, #, ₽, ', и др.) в функции токенизации.</li>
-                            <li><strong>⚡ Поддержка специальных символов:</strong> Добавлена корректная обработка всех специальных символов - они сохраняются в русском тексте и игнорируются в английской части CASSIE.</li>
-                            <li><strong>🎨 Улучшенный UI для предложений:</strong> Добавлены специальные стили для блока предложений с интерактивными кнопками и подсказками типов замен.</li>
-                        </ul>
-                    </div>
-                    <div class="update-item">
-                        <div class="update-date">v0.5 - 27 апреля 2026</div>
-                        <ul class="update-list">
-                            <li><strong>🔧 Система обработки составных фраз:</strong> Добавлена функция <code>replacePhrasesInText()</code> для предварительной замены многословных выражений на специальные токены перед основной обработкой.</li>
-                            <li><strong>🎯 Поддержка фраз со множеством слов:</strong> Реализована корректная обработка составных выражений: "служба безопасности" → "Security Guard", "мобильная оперативная группа" → "MtfUnit" и других.</li>
-                            <li><strong>⚙️ Улучшенная токенизация:</strong> Исправлена обработка специальных фразовых токенов вида `__PHRASE_XXX__` в функции `tokenizeInput()` для корректного захвата полного названия фразы.</li>
-                            <li><strong>✅ Правильный перевод многословных выражений:</strong> Составные фразы теперь переводятся как единое целое, без разбиения на отдельные слова, что устраняет ошибки вроде "Service Security" → "Security Guard".</li>
-                            <li><strong>🛠️ Исправление логики словаря:</strong> Фразы из словаря `russianToCassie` теперь обрабатываются перед простыми словами, обеспечивая правильный приоритет перевода.</li>
-                            <li><strong>📊 Статистика обновлена:</strong> Составные фразы теперь корректно учитываются как одно распознанное выражение в статистике генерации.</li>
-                        </ul>
-                    </div>
-                    <div class="update-item">
-                        <div class="update-date">v0.4 - 27 апреля 2026</div>
-                        <ul class="update-list">
-                            <li><strong>🎨 Полный редизайн UI/UX:</strong> Переход на современный dark neon / cyberpunk стиль с улучшенной визуальной иерархией.</li>
-                            <li><strong>⚡ Главная кнопка CTA:</strong> Кнопка "Сгенерировать" стала самой заметной и привлекательной с градиентом и свечением.</li>
-                            <li><strong>📝 Улучшенное поле ввода:</strong> Крупнее размер, яркий фокус с glow-эффектом, понятный placeholder с примером.</li>
-                            <li><strong>🎯 Блок результата:</strong> Выделен как главный элемент с моноширинным шрифтом, статусом "Готово" и кнопкой копирования рядом.</li>
-                            <li><strong>🎨 Цветовая система:</strong> Уменьшен визуальный шум, четко разделены primary/secondary/accent цвета (фиолетовый/розовый/синий).</li>
-                            <li><strong>🔘 Группировка кнопок:</strong> Логическая организация команд, уменьшено количество одновременно видимых элементов.</li>
-                            <li><strong>📱 Адаптивность:</strong> Улучшена отзывчивость интерфейса для мобильных устройств и планшетов.</li>
-                            <li><strong>🧠 Интеллектуальные предложения замен:</strong> Для нераспознанных слов автоматически предлагаются похожие варианты по написанию, семантике и началу слова с возможностью быстрого применения.</li>
-                        </ul>
-                    </div>
-                    <div class="update-item">
-                        <div class="update-date">v0.3 - 27 апреля 2026</div>
-                        <ul class="update-list">
-                            <li><strong>✈️ NATO команды:</strong> Добавлены шаблоны NATO_A … NATO_Z и новые кнопки для быстрого вставления команд.</li>
-                            <li><strong>🔘 Русский UI:</strong> Тексты кнопок NATO теперь отображаются на русском, как в разделе основных команд.</li>
-                            <li><strong>🪄 Форматирование в английской части:</strong> $STUTTER, $sleep_XX и $pitch_XX теперь вставляются только в английскую часть CASSIE и не учитываются в статистике распознавания.</li>
-                            <li><strong>🧠 Умная токенизация:</strong> Добавлена поддержка команд с подчёркиваниями (например, NATO_A), чтобы они корректно распознавались как единый токен.</li>
-                            <li><strong>✅ Улучшение статистики:</strong> Форматирование и теги цвета больше не влияют на показатели «Распознано» и «Точность».</li>
-                            <li><strong>📋 Обновлённая помощь:</strong> В справке точно указано поведение форматирования и языков для sub/csub частей.</li>
-                        </ul>
-                    </div>
-                    <div class="update-item">
-                        <div class="update-date">v0.1 - Изначальная версия</div>
-                        <ul class="update-list">
-                            <li>Базовый функционал генератора CASSIE команд</li>
-                            <li>Поддержка русского и английского текста</li>
-                            <li>Базовые кнопки форматирования</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
             <div class="info-card">
                 <div class="info-card-header">
                     <div>
